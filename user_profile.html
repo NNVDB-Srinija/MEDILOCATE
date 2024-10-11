@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile and Emergency Contacts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .profile, .emergency-contacts {
+            margin-bottom: 20px;
+        }
+        .profile div, .emergency-contacts div {
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="profile">
+            <div>
+                <label for="name">Name:</label>
+                <span id="name">John Doe</span>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <span id="age">28</span>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <span id="email">johndoe@example.com</span>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <span id="phone">+91 8937494444</span>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <span id="address">123 Main Street, vijayawada,India</span>
+            </div>
+        </div>
+
+        <h2>Emergency Contacts</h2>
+        <div class="emergency-contacts">
+            <div>
+                <label for="contact1">Contact 1:</label>
+                <span id="contact1">Jane Doe - +91 9876543210 (Sister)</span>
+            </div>
+            <div>
+                <label for="contact2">Contact 2:</label>
+                <span id="contact2">Robert Smith - +91 8555666777 (Friend)</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

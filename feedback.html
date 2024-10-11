@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #89f7fe, #66a6ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-bottom: 50px; /* To avoid footer overlapping content */
+        }
+
+        .feedback-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            width: 400px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feedback-container:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            background-color: #f3f4f6;
+        }
+
+        input:hover, select:hover, textarea:hover {
+            background-color: #eaeef3;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+        }
+
+        /* Rating system */
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+            margin-bottom: 20px;
+            flex-direction: row-reverse; /* Reverse the stars order */
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            font-size: 20px;
+            color: #bbb;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        /* Style all previous stars when a higher star is selected */
+        .rating input:checked ~ label {
+            color: #FFD700;
+        }
+
+        .rating input#star1:checked ~ label[for="star1"],
+        .rating input#star2:checked ~ label[for="star1"],
+        .rating input#star2:checked ~ label[for="star2"],
+        .rating input#star3:checked ~ label[for="star1"],
+        .rating input#star3:checked ~ label[for="star2"],
+        .rating input#star3:checked ~ label[for="star3"],
+        .rating input#star4:checked ~ label[for="star1"],
+        .rating input#star4:checked ~ label[for="star2"],
+        .rating input#star4:checked ~ label[for="star3"],
+        .rating input#star4:checked ~ label[for="star4"],
+        .rating input#star5:checked ~ label[for="star1"],
+        .rating input#star5:checked ~ label[for="star2"],
+        .rating input#star5:checked ~ label[for="star3"],
+        .rating input#star5:checked ~ label[for="star4"],
+        .rating input#star5:checked ~ label[for="star5"] {
+            color: #FFD700;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        footer {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        @media (max-width: 500px) {
+            .feedback-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            footer {
+                right: 10px;
+                bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feedback-container">
+        
+        <h2>We Value Your Feedback</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="rating">Rate Our Service:</label>
+            <div class="rating">
+                <!-- Reverse order of stars (5 to 1 visually but 1 to 5 rating system) -->
+                <input type="radio" name="rating" value="5" id="star5"><label for="star5">&#9733;</label>
+                <input type="radio" name="rating" value="4" id="star4"><label for="star4">&#9733;</label>
+                <input type="radio" name="rating" value="3" id="star3"><label for="star3">&#9733;</label>
+                <input type="radio" name="rating" value="2" id="star2"><label for="star2">&#9733;</label>
+                <input type="radio" name="rating" value="1" id="star1"><label for="star1">&#9733;</label>
+            </div>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" required placeholder="Tell us about your experience..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    <footer>
+        &copy; MediLocate App. All rights reserved.
+    </footer>
+
+</body>
+</html>

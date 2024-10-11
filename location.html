@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediLocate - Find Hospitals Nearby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #89f7fe, #66a6ff);
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label, select, input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        select, input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>MediLocate - Find Hospitals Nearby</h1>
+
+        <form action="#" method="get">
+            <label for="hospital">Choose a hospital:</label>
+            <select id="hospital" name="hospital">
+                <option value="City Hospital">City Hospital</option>
+                <option value="Central Medical Clinic">Central Medical Clinic</option>
+                <option value="Sunrise Health Center">Sunrise Health Center</option>
+                <option value="Green Valley Hospital">Green Valley Hospital</option>
+            </select>
+
+            <input type="submit" value="Select Hospital">
+        </form>
+    </div>
+
+</body>
+</html>
